@@ -1,0 +1,12 @@
+Work list:
+
+-Make entity functions type-generic
+--Hover display, table-ify, what else?
+--If multiple types of components need to check type and set what to display based on that, we should standardize that somehow
+--Users need to be able to define those types easily
+--Probably add a content-types folder to relevant components. The folder contains JSON files. Probably just make type match name of file, then load that file
+
+-Simple landing page and header
+--Routing
+
+-Add clickable tags as filters to tables

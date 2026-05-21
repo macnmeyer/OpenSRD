@@ -1,0 +1,10 @@
+{
+    "id": "scan",
+    "type": "spell",
+    "name": "Scan",
+    "source": "Core Rulebook",
+    "cost": "1",
+    "complexity": "8",
+    "text": "This spell scans your target, heightening your perception and understanding of it. Any rolls made to find physical information about the target gain this spell's power as a bonus to the roll. This includes determining whether someone is telling the truth, since there are physical indicators telling if someone is lying. For example, you could use it to help diagnose an illness or tell if your target is palming a coin, but this spell couldn't determine what their favorite food is. The spell’s area determines how large of an object or what segment of a larger object can be scanned with a single scan spell. For example, if the spell has an area of 1 meter, you could scan a person’s head, but not their entire body. If the spell has an area of 10 meters, you could scan a whole building, but not an entire city.",
+    "tags": ["area"]
+}

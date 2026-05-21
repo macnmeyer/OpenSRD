@@ -1,0 +1,8 @@
+{
+    "id": "medicine",
+    "type": "skill",
+    "name": "Medicine",
+    "source": "Core Rulebook",
+    "description": "Fixing people",
+    "text": "Medicine is a character’s skill at diagnosing and treating injuries, diseases, and the like. It includes all related knowledge such as anatomy and the effects of common drugs (but not how they’re synthesized). Medicine skill checks are made most commonly to heal other people."
+}

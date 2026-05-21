@@ -1,0 +1,8 @@
+{
+    "id":
+    "type": "skill"
+    "name":
+    "source":
+    "description":
+    "text":
+}

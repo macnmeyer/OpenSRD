@@ -1,0 +1,8 @@
+{
+    "id": "aim",
+    "type": "skill",
+    "name": "Aim",
+    "source": "Core Rulebook",
+    "description": "Hitting things at a distance",
+    "text": "The aim skill is applied to ranged attack rolls."
+}

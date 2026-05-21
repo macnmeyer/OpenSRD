@@ -1,0 +1,8 @@
+{
+    "id": "reaction",
+    "type": "skill",
+    "name": "Reaction",
+    "source": "Core Rulebook",
+    "description": "Catching falling glasses and avoiding explosions",
+    "text": "Reaction measures how quickly you can react to danger and opportunity. Dodging an attack, catching a falling cup, and leaping out of the way before a trap goes off are all Agility (Reaction) checks. "
+}

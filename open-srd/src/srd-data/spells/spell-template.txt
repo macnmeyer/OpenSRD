@@ -1,0 +1,10 @@
+{
+    "id": "example-spell",
+    "type": "spell",
+    "name": "Example Spell",
+    "source": "Core Rulebook",
+    "cost": "X",
+    "complexity": "X",
+    "text": "Every entry needs these at a bare minimum.",
+    "tags": ["tag1", "tag2"]
+}
