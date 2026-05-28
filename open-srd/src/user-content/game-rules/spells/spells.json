@@ -1,0 +1,82 @@
+[
+  {
+    "Name": "Accelerate",
+    "ID": "accelerate",
+    "Source": "Core Rulebook",
+    "Discipline": "Arcane",
+    "Cost": 5,
+    "Complexity": 10,
+    "Tags": "Binding, Force, Sustained",
+    "Text": "This powerful spell alters how its subject moves through time, granting them inhuman celerity and reaction time as the world around them slows to a crawl. The accelerated character adds this spell’s power to their initiative, speed, and as bonus dice on all Agility rolls (if that would raise their initiative higher than the current initiative count, they may immediately take their turn). Mortal bodies struggle to withstand the level of strain put on them by this spell. The first round per day a character is bound by this spell they suffer no ill effects, but each round beyond that, the character gains a point of fatigue. This is reset once the character rests; they regain their ‘free’ round of acceleration."
+  },
+  {
+    "Name": "Aegis",
+    "ID": "aegis",
+    "Source": "Core Rulebook",
+    "Discipline": "Arcane",
+    "Cost": 2,
+    "Complexity": 6,
+    "Tags": "Area, Binding, Sustained",
+    "Text": "This spell safeguards its target against incoming projectiles by conjuring an opposing force to intercept any sufficiently fast object crossing its threshold. When the target would be hit by a physical projectile such as a bullet or arrow, this spell attempts to deflect it. Damage that would be dealt by the projectile is instead subtracted from this spell’s power. This happens before the projectile strikes the protected character and so is applied before armor. If the projectile’s power is reduced to 0, it never touches the protected character, and if the projectile is explosive that explosion is still centered on the target. If the spell is reduced to 0 power, any remaining damage goes through and can be resisted normally. If this spell is bound to a character, it only protects them. If this spell is bound to a point it affects all projectiles entering its"
+  },
+  {
+    "Name": "Censor",
+    "ID": "censor",
+    "Source": "Core Rulebook",
+    "Discipline": "Arcane",
+    "Cost": 3,
+    "Complexity": 8,
+    "Tags": "Binding, Illusion",
+    "Text": "You conjure a dark cloud over the victim’s eyes to obscure their vision. Censored characters add this spell's power to the difficulty of all sight-based rolls they make, including all attack and all defense rolls."
+  },
+  {
+    "Name": "Detonation",
+    "ID": "detonation",
+    "Source": "Core Rulebook",
+    "Discipline": "Arcane",
+    "Cost": 4,
+    "Complexity": 5,
+    "Tags": "Area, Force",
+    "Text": "This spell generates a violent shockwave that explodes outward from the targeted point. Everything within the area of the spell may use a reaction to resist its effects with an Agility (Reaction) roll. Everything affected takes damage equal to the spell’s power, and anything hit by a blast whose power is equal to or greater than their Might attribute is knocked prone."
+  },
+  {
+    "Name": "Highlight",
+    "ID": "highlight",
+    "Source": "Core Rulebook",
+    "Discipline": "Arcane",
+    "Cost": 2,
+    "Complexity": 6,
+    "Tags": "Binding, Illusion, Sustained",
+    "Text": "This spell outlines the target in a bright glow. Characters gain bonus dice equal to this spell’s power on Mind (Awareness) rolls made to see a highlighted character. This spell works even if the target is affected by invisibility, though it still only outlines them and does not help you see any details."
+  },
+  {
+    "Name": "Light",
+    "ID": "light",
+    "Source": "Core Rulebook",
+    "Discipline": "Arcane",
+    "Cost": 2,
+    "Complexity": 5,
+    "Tags": "Area, Illusion, Sustained",
+    "Text": "You conjure a brilliant point of light that illuminates the area around it in harsh shades of blue and white. This spell’s area indicates the area that is illuminated in light equivalent to daylight, but the actual light is cast far beyond this area and grows fainter beyond that, while the mote of light itself can be seen from over a mile away under the right conditions. Characters within the spell’s area looking directly at the spell’s center suffer a penalty on all rolls that require vision equal to the spell’s power. This spell harms creatures that are vulnerable to sunlight and anything that protects creatures from sunlight, such as the tinted lenses commonly worn by wisps, protect that creature from this spell’s negative effects."
+  },
+  {
+    "Name": "Repulse",
+    "ID": "repulse",
+    "Source": "Core Rulebook",
+    "Discipline": "Arcane",
+    "Cost": 3,
+    "Complexity": 5,
+    "Tags": "Area, Force",
+    "Text": "This spell emits a shockwave that violently repulses anything it touches. When this spell is evoked, choose an area or a line. If you choose an area, everything within the spell’s area is thrown a number of meters equal to the spell’s power away from the center. If you choose a line, choose a direction for the line to point. The line has a length equal to the spell’s power, and everything within the line is thrown a number of meters equal to the spell’s power in the direction the line is pointing. Characters may spend a reaction to resist this throw with a Might (Endurance) roll."
+  },
+  {
+    "Name": "Silence",
+    "ID": "silence",
+    "Source": "Core Rulebook",
+    "Discipline": "Arcane",
+    "Cost": 3,
+    "Complexity": 8,
+    "Tags": "Area, Illusion, Sustained",
+    "Text": "This spell creates an area from which sound cannot escape. If this spell targets an area, then no sound made within the area can leave. If it binds a character, then sound made by that character can’t be heard by anyone else even though they’re still perfectly capable of hearing themselves. Sound can enter the affected area, so characters within it or spellbound by it can still hear normally."
+  }
+]

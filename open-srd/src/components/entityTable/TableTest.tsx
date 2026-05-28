@@ -22,8 +22,7 @@ import { Button } from "@/components/ui/button.js";
 import { Badge } from "@/components/ui/badge.js";
 import { Input } from "@/components/ui/input.js";
 
-import { useContext } from "react";
-import { SpellDatabaseContext, SpellDatabaseProvider } from "../../context/DatabaseContext.js";
+import { useDatabase } from "../../context/DatabaseContext.js";
 import { ArrowUpDown, X } from "lucide-react"
 
 type tableDataSpell = {

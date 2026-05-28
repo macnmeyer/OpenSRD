@@ -10,3 +10,15 @@ Work list:
 --Routing
 
 -Add clickable tags as filters to tables
+
+
+
+
+{
+    "title": "OpenSRD",
+    "description": "A web application for browsing and managing content from the System Reference Document (SRD) for tabletop role-playing games.",
+    "keywords": ["SRD", "tabletop RPG", "content management", "web application"],
+    "author": "Your Name",
+    "version": "1.0.0",
+    "license": "MIT"
+},

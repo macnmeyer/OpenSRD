@@ -1,23 +1,15 @@
-export type ContentEntry = {
-    id: string;
-    name: string;
-    source: string;
-    text: string;
-    tags: string[];
-}
-
-export type ContentDatabase = null | { [id: string]: ContentEntry };
+type ContentTypeList = Spell | Item | NPC;
 
 export type Spell = {
     id: string;
     name: string;
     source: string;
+    discipline: string;
     cost: number | string;
     complexity: number | string;
     text: string;
     tags: string[];
 }
-export type SpellDatabase = null | { [id: string]: Spell };
 
 export type Item = {
     id: string;
@@ -28,6 +20,8 @@ export type Item = {
     text: string;
     tags: string[];
 }
+
+
 
 export type NPC = {
     id: string;

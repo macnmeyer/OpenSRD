@@ -1,6 +1,6 @@
 import React from 'react'
 import { useContext } from "react";
-import { SpellDatabaseContext, SpellDatabaseProvider } from "../../context/DatabaseContext.js";
+import { useDatabase } from "../../context/DatabaseContext.js";
 import {
   Table,
   TableBody,
@@ -11,26 +11,27 @@ import {
   TableHeader,
   TableRow,
 } from "@/components/ui/table.js";
-import type { ColumnDef } from "@tanstack/react-table";
 
-import type { Spell } from "src/types/content.js";
-type spellArray = Spell[];
-type tableDataSpell = {
-  name: string;
-  cost: number;
-  complexity: number;
-  text: string;
+type EntityTableProps = {
+  entityType: string;
+}
+interface ColumnFilter {
+  id: string;
+  value: unknown;
 }
 
-const EntityTable = () => {
+const EntityTable = ({ entityType }: EntityTableProps) => {
 
-  const spells = useContext(SpellDatabaseContext);
-  const data = Object.values(spells || {});
+  const db = useDatabase();
+  {/* it goes db.[entityType].[entity].[entityProperty] */}
+  const tableData = db?.[entityType]
+  const entities = Object.values(db?.[entityType] ?? {})
+  console.log("entities:", entities)
 
   return (
     <>
       <Table>
-        <TableCaption>Spells</TableCaption>
+        <TableCaption>{entityType}</TableCaption>
         <TableHeader>
           <TableRow>
             <TableHead>Spell</TableHead>
@@ -40,12 +41,12 @@ const EntityTable = () => {
           </TableRow>
         </TableHeader>
         <TableBody>
-          {data.map((spell) =>
-            <TableRow key={spell.name}>
-              <TableCell>{spell.name}</TableCell>
-              <TableCell>{spell.cost}</TableCell>
-              <TableCell>{spell.complexity}</TableCell>
-              <TableCell>{spell.text}</TableCell>
+          {entities.map((entity) =>
+            <TableRow key={entity.Name}>
+              <TableCell>{entity.Name}</TableCell>
+              <TableCell>{entity.Cost}</TableCell>
+              <TableCell>{entity.Complexity}</TableCell>
+              <TableCell>{entity.Text}</TableCell>
             </TableRow>
           )}
         </TableBody>
