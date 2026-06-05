@@ -20,6 +20,7 @@ import {
 import { CircleAlertIcon, CircleCheckIcon, CircleDashedIcon } from "lucide-react"
 import { SidebarTrigger } from '../ui/sidebar.js';
 import { Link } from 'react-router'
+import { Button } from '../ui/button.js';
 
 function MenubarNavigation() {
   return (
@@ -55,36 +56,35 @@ function MenubarNavigation() {
   )
 }
 
+function ListItem({
+  url, title, description,}: {url: string, title: string }) {
+  return (
+    <li>
+      <Button variant="ghost" className="w-full justify-start">
+        <Link to={url}>
+          <div className="flex flex-col">
+            <p className="text-sm font-medium">{title}</p>
+            <p className="text-sm text-muted-foreground">{description}</p>
+          </div>
+        </Link>
+      </Button>
+    </li>
+  )
+}
+
 function NavigationMenuDemo() {
   return (
-    <NavigationMenu>
+    <NavigationMenu className="text-sm md:text-base">
       <NavigationMenuList>
         <NavigationMenuItem>
-          <NavigationMenuTrigger>Getting started</NavigationMenuTrigger>
+          <NavigationMenuTrigger>Rules Content</NavigationMenuTrigger>
           <NavigationMenuContent>
-            <ul className="w-96">
+            <ul className="w-fit md:min-w-30">
+              <ListItem url="/anthrotypes" title="Anthrotypes" />
+              <ListItem url="/spells" title="Spells" />
+              <ListItem url="/gear" title="Gear" />
             </ul>
           </NavigationMenuContent>
-        </NavigationMenuItem>
-        <NavigationMenuItem className="hidden md:flex">
-          <NavigationMenuTrigger>Components</NavigationMenuTrigger>
-          <NavigationMenuContent>
-          </NavigationMenuContent>
-        </NavigationMenuItem>
-        <NavigationMenuItem>
-          <NavigationMenuTrigger>With Icon</NavigationMenuTrigger>
-          <NavigationMenuContent>
-            <ul className="grid w-50">
-              <li>
-                <NavigationMenuLink render={<CircleAlertIcon />} />
-                <NavigationMenuLink render={<CircleDashedIcon />} />
-                <NavigationMenuLink render={<CircleCheckIcon />} />
-              </li>
-            </ul>
-          </NavigationMenuContent>
-        </NavigationMenuItem>
-        <NavigationMenuItem>
-          <NavigationMenuLink className={navigationMenuTriggerStyle()} render={<CircleAlertIcon />} />
         </NavigationMenuItem>
       </NavigationMenuList>
     </NavigationMenu>
@@ -96,8 +96,12 @@ const Header = () => {
     <>
     <div className='w-full h-12 flex bg-blue-100 justify-center items-center'>
       <SidebarTrigger />
-      <h1>OpenSRD</h1>
-      <MenubarNavigation />
+      <Button variant="ghost">
+        <Link to="/">
+          <h1 className="text-lg font-semibold">OpenSRD</h1>
+        </Link>
+      </Button>
+      {/* <MenubarNavigation /> */}
       <NavigationMenuDemo />
     </div>
   </>

@@ -12,9 +12,9 @@ function App() {
 
   return (
     <>
-      <main className="flex flex-col items-center min-h-svh w-svw overflow-hidden">
+      <main className="flex flex-col items-center min-h-svh w-full">
         <Header />
-        <div className="layout-wrapper flex flex-col flex-1 overflow-hidden h-full w-full">
+        <div className="layout-wrapper flex flex-col flex-1 h-full w-full p-4">
           <AppSidebar />
           <Layout />
         </div>

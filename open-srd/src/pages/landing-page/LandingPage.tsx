@@ -14,10 +14,11 @@ const LandingPage = () => {
 
   return (
     <div className="flex flex-col items-center justify-center">
-        <section className="w-full h-64 flex flex-col items-center justify-center gap-4">
+        <section className="w-full lg:max-w-300  h-64 flex flex-col items-center justify-center gap-4">
           <h1 className="text-4xl font-bold">{data.title}</h1>
           <h2 className="text-2xl text-gray-500">{data.subtitle}</h2>
           <p>{data.content}</p>
+          <p>github repo card goes here</p>
         </section>
     </div>
   )
