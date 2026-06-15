@@ -1,6 +1,6 @@
 import React from 'react'
 import { useContext, useState } from "react";
-import { DatabaseContext } from '../../context/DatabaseContext.js';
+import { useDatabase } from '../../context/DatabaseContext.js';
 
 type EntityHoverDisplayProps = {
   entityID: string;
@@ -11,7 +11,7 @@ type EntityHoverDisplayProps = {
 
 export default function EntityHoverDisplay ({ entityID, children }: EntityHoverDisplayProps) {
 
-  const database = useContext(DatabaseContext);
+  const database = useDatabase();
   const entity = database?.[entityID];
 
   const [isOpen, setIsOpen] = useState(false);

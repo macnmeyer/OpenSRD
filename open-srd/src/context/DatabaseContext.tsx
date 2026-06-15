@@ -46,7 +46,7 @@ function dataLoader() {
       {/* currentDataFileContent = the array of json objects */}
       {/* Goal: db.contentType["id of anything in currentDataFileContent"] */}
     for (const entity of arrayOfEntities) {
-      const entityID = entity.ID ?? entity.Name
+      const entityID = entity.ID ?? entity.name
       if (!entityID) continue
       db[contentType][entityID] = entity
       console.log("entity:", entity)
