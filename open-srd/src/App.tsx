@@ -14,7 +14,7 @@ function App() {
     <>
       <main className="flex flex-col items-center min-h-svh w-full">
         <Header />
-        <div className="layout-wrapper flex flex-col flex-1 h-full w-full p-4">
+        <div className="layout-wrapper flex flex-col flex-1 w-full h-full p-4">
           <AppSidebar />
           <Layout />
         </div>
