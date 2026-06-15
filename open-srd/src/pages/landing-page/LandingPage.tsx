@@ -20,7 +20,7 @@ const LandingPage = () => {
           <h2 className="text-2xl text-gray-500">{data.subtitle}</h2>
           <p>{data.content}</p>
         </section>
-        <GithubRepoCard username="macnmeyer" repoName="open-srd" />
+        <GithubRepoCard username="macnmeyer" repoName="OpenSRD" />
     </div>
   )
 }
