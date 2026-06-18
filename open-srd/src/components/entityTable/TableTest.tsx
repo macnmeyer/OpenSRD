@@ -22,15 +22,16 @@ import { Button } from "@/components/ui/button.js";
 import { Badge } from "@/components/ui/badge.js";
 import { Input } from "@/components/ui/input.js";
 
-import { useDatabase } from "../../context/DatabaseContext.js";
+import { useDatabase } from "@/context/DatabaseContext.js";
 import { ArrowUpDown, X } from "lucide-react"
 
-type tableDataSpell = {
+interface tableDataSpell {
   name: string;
   cost: number;
   complexity: number;
   tags: string[];
   text: string;
+  [key: string]: any;
 }
 
 interface DataTableProps<TData, TValue> {
@@ -106,7 +107,8 @@ export const columns: ColumnDef<tableDataSpell>[] = [
     accessorKey: "tags",
     header: () => <div>Tags</div>,
     cell: ({ row }) => {
-        const value: string[] = row.getValue("tags");
+        const tagString: string = row.getValue("tags");
+        const value = tagString.split(",").map((tag) => tag.trim()).filter((tag) => tag.length > 0);
         return <div className="font-medium">{value.map((tag) => <Badge key={tag} className="mr-2">{tag}</Badge>)}</div>
     },
     size: 300,
@@ -122,9 +124,17 @@ export const columns: ColumnDef<tableDataSpell>[] = [
   },
 ];
 
-export function DataTable<TData, TValue>({columns, data}: DataTableProps<TData, TValue>) {
+export function spellsData() {
+  const db = useDatabase();
+  return Object.values(db?.spells || {});
+} 
+
+export function DataTable<TData, TValue>({ columns, data }: DataTableProps<TData, TValue>) {
   const [sorting, setSorting] = React.useState<SortingState>([])
   const [columnFilters, setColumnFilters] = React.useState<ColumnFiltersState>([])
+
+  console.log("data for table:", data)
+
   const table = useReactTable({
     data, columns,
     getCoreRowModel: getCoreRowModel(),

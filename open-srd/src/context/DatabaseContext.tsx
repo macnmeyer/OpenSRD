@@ -27,29 +27,29 @@ function dataLoader() {
   const globOfEntityTypes: Record<string, { default: Array<Record<string, any>> }> = import.meta.glob("root/src/user-content/game-rules/**/*.json",
     { eager: true });
     {/* Object. Keys: file paths. Values: {default: array of json objects} */}
-    {console.log("glob:",Object.values(globOfEntityTypes))}
+    {/* console.log("glob:",Object.values(globOfEntityTypes)) */}
   const db: Record<string, any> = {}
 
   for (const [filePath, contentModule] of Object.entries(globOfEntityTypes)) {
-    console.log(contentModule.default)
+    {/* console.log(contentModule.default) */}
     const filePathParts = filePath.split("/")
     const contentType = filePathParts.at(-2)
-    console.log("content type", contentType)
+    {/* console.log("content type", contentType) */}
     if (!contentType) continue
       {/* filPath is a string. filePathParts is an array of strings where each entry is part of the file path. contentType is the name of the folder containing the file we'll work with */}
     if (!db[contentType]) {
       db[contentType] = {}
-      console.log
+      {/* console.log("contentType:", contentType) */}
     }
     const arrayOfEntities = contentModule.default;
-    console.log("array of entities:", arrayOfEntities)
+    {/* console.log("array of entities:", arrayOfEntities) */}
       {/* currentDataFileContent = the array of json objects */}
       {/* Goal: db.contentType["id of anything in currentDataFileContent"] */}
     for (const entity of arrayOfEntities) {
-      const entityID = entity.ID ?? entity.name
+      const entityID = entity.id ?? entity.name
       if (!entityID) continue
       db[contentType][entityID] = entity
-      console.log("entity:", entity)
+      {/* console.log("entity:", entity) */}
     }
   }
   return db;
