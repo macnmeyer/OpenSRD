@@ -1,0 +1,17 @@
+{
+    "anthrotypes": {
+        "label": "Anthrotypes",
+        "icon": false,
+        "url": "/anthrotypes"
+    },
+    "gear": {
+        "label": "Gear",
+        "icon": false,
+        "url": "/gear"
+    },
+    "spells": {
+        "label": "Spells",
+        "icon": false,
+        "url": "/spells"
+    }
+}

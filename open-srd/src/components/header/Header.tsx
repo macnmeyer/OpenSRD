@@ -18,7 +18,7 @@ import {
   navigationMenuTriggerStyle,
 } from "@/components/ui/navigation-menu.js"
 import { CircleAlertIcon, CircleCheckIcon, CircleDashedIcon } from "lucide-react"
-import { SidebarToggleButton } from '../app-sidebar/AppSidebar.js'
+import AppSidebar, { SidebarToggleButton } from '../app-sidebar/AppSidebar.js'
 import { Link } from 'react-router'
 import { Button } from '../ui/button.js';
 
@@ -93,8 +93,9 @@ function NavigationMenuDemo() {
 
 const Header = () => {
   return (
+  <>
+    <AppSidebar />
     <div className='w-full h-12 flex bg-blue-100 justify-center items-center'>
-      <SidebarToggleButton />
       <Button variant="ghost">
         <Link to="/">
           <h1 className="text-lg font-semibold">OpenSRD</h1>
@@ -103,6 +104,7 @@ const Header = () => {
       {/* <MenubarNavigation /> */}
       <NavigationMenuDemo />
     </div>
+  </>
   )
 }
 

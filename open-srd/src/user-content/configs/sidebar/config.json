@@ -1,7 +1,9 @@
 {
     "enabled": true,
+    "header": true,
+    "footer": true,
     "icon": "default",
     "position": "left",
     "transition": "default",
-    "duration": 120  
+    "duration": 120
 }
