@@ -17,7 +17,6 @@ import {
   NavigationMenuTrigger,
   navigationMenuTriggerStyle,
 } from "@/components/ui/navigation-menu.js"
-import { CircleAlertIcon, CircleCheckIcon, CircleDashedIcon } from "lucide-react"
 import AppSidebar, { SidebarToggleButton } from '../app-sidebar/AppSidebar.js'
 import { Link } from 'react-router'
 import { Button } from '../ui/button.js';
@@ -60,19 +59,21 @@ function ListItem({
   url, title, description,}: {url: string, title: string, description?: string}) {
   return (
     <li>
-      <Button variant="ghost" className="w-full justify-start">
-        <Link to={url}>
+      <Link to={url}>
+        <Button variant="ghost" className="w-full justify-start cursor-pointer">
           <div className="flex flex-col">
             <p className="text-sm font-medium">{title}</p>
-            <p className="text-sm text-muted-foreground">{description}</p>
+            {description && (
+              <p className="text-sm text-muted-foreground">{description}</p>
+            )}
           </div>
-        </Link>
-      </Button>
+        </Button>
+      </Link>
     </li>
   )
 }
 
-function NavigationMenuDemo() {
+function HeaderNav() {
   return (
     <NavigationMenu className="text-sm md:text-base">
       <NavigationMenuList>
@@ -96,13 +97,14 @@ const Header = () => {
   <>
     <AppSidebar />
     <div className='w-full h-12 flex bg-blue-100 justify-center items-center'>
-      <Button variant="ghost">
-        <Link to="/">
-          <h1 className="text-lg font-semibold">OpenSRD</h1>
-        </Link>
-      </Button>
-      {/* <MenubarNavigation /> */}
-      <NavigationMenuDemo />
+      <Link to="/">
+        <Button variant="ghost" className="w-full justify-start cursor-pointer">
+          <div className="flex flex-col">
+            <h1 className="text-lg font-semibold">OpenSRD</h1>
+          </div>
+        </Button>
+      </Link>
+      <HeaderNav />
     </div>
   </>
   )
